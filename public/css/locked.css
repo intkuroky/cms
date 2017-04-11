@@ -1,0 +1,105 @@
+@media screen and (min-width: 1200px) {
+    .pincode-input-text {
+        width: 50px !important;
+        height: 50px;
+        margin: 10px;
+        font-size: 27px !important;
+        border: 1px solid #ccc !important;
+        border-radius: 4px !important;
+    }
+
+    .pincode-input-text-disabled {
+        width: 50px !important;
+        height: 50px;
+        margin: 10px;
+        font-size: 27px !important;
+        border: 0px;
+        float: left;
+        cursor: default !important;
+        box-shadow: none !important;
+        background-color: rgba(204, 204, 204, 0) !important;
+        color: #333 !important;
+        /*border-radius: 4px !important;*/
+    }
+
+    .locked-icon img {
+        height: 120px;
+        margin-bottom: 50px;
+    }
+
+    body {
+        background-image: url('../imgs/couple.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        background: rgba(228, 224, 224, 0.38);
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .pincode-input-text-disabled {
+        width: 50px !important;
+        /*margin: 5px;*/
+        font-size: 30px !important;
+        border: 0px;
+        float: left;
+        cursor: default !important;
+        box-shadow: none !important;
+        background-color: rgba(204, 204, 204, 0) !important;
+        height: 50px;
+        color: #333 !important;
+        /*border-radius: 4px !important;*/
+    }
+
+    .pincode-input-text {
+        height: 50px !important;
+        font-size: 30px !important;
+        letter-spacing: 37px !important;
+    }
+
+    .touchwrapper {
+        width: 200px !important;
+        height: 50px !important;
+    }
+
+    .locked-icon img {
+        height: 160px;
+        margin-bottom: 50px;
+    }
+
+    body {
+        background-image: url('../imgs/couple-2.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .touchwrapper .form-control {
+        border: 2px solid #333 !important;
+    }
+    .touchwrapper td{
+        border-color: #333 !important;
+    }
+}
+
+.pincode-input-error {
+    display: none !important;
+}
+
+.info-me {
+    text-decoration: none !important;
+    font-size: 30px;
+    color: #333;
+}
+
+.info-me:hover {
+    color: rgba(249, 6, 6, 0.64);
+}

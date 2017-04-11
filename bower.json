@@ -1,0 +1,24 @@
+{
+  "name": "yancao-cms",
+  "description": "test project",
+  "main": "",
+  "authors": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "bootstrap-validator": "~0.9.0",
+    "jquery_lazyload": "jquery.lazyload#~1.9.7",
+    "bootstrap": "~3.3.6",
+    "AdminLTE": "admin-lte#~2.3.3",
+    "font-awesome": "~4.6.1",
+    "moment": "2.9.0"
+  }
+}
