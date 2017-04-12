@@ -156,7 +156,7 @@
                             <td>
                                 <?php $car = \App\Models\DeliveryCar::find($order['delivery_car']) ?>
                                 <span class="text-success">
-                                {{ $car['name'] }}
+                                {{ $car['car_no'] }}
                                 </span>
                             </td>
                             <td>{{ $order['created_at'] }}</td>

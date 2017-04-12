@@ -9,7 +9,7 @@ class DeliveryOrderListFilter extends BaseFilter
     public function columns()
     {
         return [
-            Column::build('order_id', 'order_no'),
+            Column::build('order_id', 'order_no', [ $this, 'orderCallback' ]),
             Column::build('name', '', [ $this, 'nameCallback' ]),
             Column::build('status', 'status'),
             Column::build('datetime', '', [$this, 'datetimeCallback'])
@@ -30,6 +30,12 @@ class DeliveryOrderListFilter extends BaseFilter
 
         $builder->where('created_at', '>', date('Y-m-d H:i:s', strtotime($start)))->where('created_at', '<', date('Y-m-d H:i:s', strtotime($end)));
 
+        return $builder;
+    }
+
+    public function orderCallback($builder, Column $column, $value)
+    {
+        $builder->where('order_no', 'LIKE', '%' . $value . '%');
         return $builder;
     }
 

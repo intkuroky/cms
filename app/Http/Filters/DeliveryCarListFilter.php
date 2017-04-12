@@ -10,7 +10,7 @@ class DeliveryCarListFilter extends BaseFilter
     {
         return [
             Column::build('order_id', 'order_no'),
-            Column::build('name', 'name'),
+            Column::build('name', 'name', [ $this, 'deliveryNameCallBack' ]),
             Column::build('phone', 'phone'),
             Column::build('status', 'status'),
             Column::build('id_card_no', 'id_card_no'),
@@ -33,6 +33,12 @@ class DeliveryCarListFilter extends BaseFilter
 
         $builder->where('created_at', '>', date('Y-m-d H:i:s', strtotime($start)))->where('created_at', '<', date('Y-m-d H:i:s', strtotime($end)));
 
+        return $builder;
+    }
+
+    public function deliveryNameCallBack($builder, Column $column, $value)
+    {
+        $builder->where('name', 'LIKE', '%' . $value . '%');
         return $builder;
     }
 

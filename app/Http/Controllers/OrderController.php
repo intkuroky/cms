@@ -153,4 +153,18 @@ class OrderController extends Controller
         return responseError('订单申请失败');
     }
 
+    public function orderDelete($id, Request $request)
+    {
+        if ($user = Order::find($id)) {
+            if (Order::where([ 'id' => $id ])->delete()) {
+
+                return responseSuccess('订单删除成功！');
+            }
+
+            return responseError('订单删除失败！');
+        }
+
+        return responseError('未找到该订单信息！');
+    }
+
 }

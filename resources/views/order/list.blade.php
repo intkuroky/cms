@@ -158,6 +158,13 @@
                                    data-original-title="查看订单">
                                     <i class="fa fa-file-text-o"></i>
                                 </a>
+
+                                <a class="btn btn-sm btn-flat btn-danger" data-toggle="tooltip"
+                                   data-placement="top" title="" data-original-title="删除订单"
+                                   onclick="deleteOrder('{{ $order['id'] }}')">
+                                    <i class="fa fa-close"></i>
+                                </a>
+
                                 @if(\Auth::user()->hasRole('seller'))
                                     @if($order['status'] ==\App\Models\Order::ORDER_APPLYING)
                                         <a class="btn btn-flat btn-sm btn-success" data-toggle="tooltip"
@@ -375,6 +382,10 @@
             swal('', response.message, 'error');
           }
         });
+      }
+
+      function deleteOrder(orderId) {
+          postRequest('/order/delete/' + orderId);
       }
     </script>
 @endsection

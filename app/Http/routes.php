@@ -241,6 +241,11 @@ Route::group([
         'uses' => 'OrderController@orderInfo',
     ]);
 
+    Route::post('order/delete/{id}', [
+        'as'   => 'order.delete',
+        'uses' => 'OrderController@orderDelete',
+    ]);
+
     // 营销中心
     Route::get('seller/order', [
         'as'   => 'seller.order',
